@@ -213,7 +213,737 @@
     </div>
 
     <script type="text/babel">
-        const _0x2516b1=_0x515d;(function(_0x5dcf4f,_0x3c6f8b){const _0x4df6af=_0x515d,_0x5dcfbb=_0x5dcf4f();while(!![]){try{const _0x168e26=parseInt(_0x4df6af(0x13f))/0x1+-parseInt(_0x4df6af(0x1a5))/0x2*(parseInt(_0x4df6af(0x1c2))/0x3)+-parseInt(_0x4df6af(0x15b))/0x4+parseInt(_0x4df6af(0x175))/0x5*(parseInt(_0x4df6af(0x1b3))/0x6)+parseInt(_0x4df6af(0x1ad))/0x7+parseInt(_0x4df6af(0x139))/0x8*(parseInt(_0x4df6af(0x19c))/0x9)+-parseInt(_0x4df6af(0x1c6))/0xa*(parseInt(_0x4df6af(0x15a))/0xb);if(_0x168e26===_0x3c6f8b)break;else _0x5dcfbb['push'](_0x5dcfbb['shift']());}catch(_0x351372){_0x5dcfbb['push'](_0x5dcfbb['shift']());}}}(_0x42c5,0xb085c));const {HotTable}=Handsontable[_0x2516b1(0x152)],store=new Vuex[(_0x2516b1(0x14a))]({'state':{'token':null,'tokenExpiry':null,'response':''},'mutations':{'setToken'(_0x1e28c0,_0x2f00d6){const _0x3268e2=_0x2516b1;_0x1e28c0[_0x3268e2(0x141)]=_0x2f00d6['token'],_0x1e28c0['tokenExpiry']=_0x2f00d6['expiry'];},'clearToken'(_0x11abfa){const _0xebca5f=_0x2516b1;_0x11abfa[_0xebca5f(0x141)]=null,_0x11abfa[_0xebca5f(0x1cf)]=null;},'setResponse'(_0x5b0538,_0x5380da){const _0x332bb5=_0x2516b1;_0x5b0538[_0x332bb5(0x14c)]=_0x5380da;}},'getters':{'isTokenValid'(_0x4f08e7){const _0x2d8d6b=_0x2516b1;return _0x4f08e7['token']&&_0x4f08e7['tokenExpiry']&&Date[_0x2d8d6b(0x167)]()<_0x4f08e7[_0x2d8d6b(0x1cf)];}},'actions':{async 'login'({commit:_0x498b27},{kullanici:_0x3c4af9,isyeriKodu:_0x1302c7,sifre:_0x4eecb9}){const _0x3a781f=_0x2516b1;try{const _0x4c31d0=_0x3a781f(0x166)+_0x3c4af9+_0x3a781f(0x150)+_0x1302c7+_0x3a781f(0x1bb)+_0x4eecb9+_0x3a781f(0x13a),_0x6e5804=await fetch(_0x3a781f(0x185),{'method':'POST','headers':{'Content-Type':_0x3a781f(0x131),'SOAPAction':'http://www.sgk.gov.tr/wsLogin'},'body':_0x4c31d0});if(!_0x6e5804['ok'])throw new Error(_0x3a781f(0x132)+_0x6e5804[_0x3a781f(0x187)]+'\x20'+_0x6e5804[_0x3a781f(0x192)]);const _0x8f311e=await _0x6e5804['text']();console['log'](_0x3a781f(0x170),_0x8f311e);const _0x447c83=new DOMParser(),_0x48c2e8=_0x447c83[_0x3a781f(0x16a)](_0x8f311e,'text/xml'),_0x424324=_0x48c2e8[_0x3a781f(0x147)](_0x3a781f(0x191));if(_0x424324){const _0x50c9be=_0x48c2e8[_0x3a781f(0x147)](_0x3a781f(0x168))?.[_0x3a781f(0x137)]||_0x3a781f(0x180);throw new Error('SOAP\x20Fault:\x20'+_0x50c9be);}let _0x8b4616=_0x48c2e8[_0x3a781f(0x147)]('wsToken')||_0x48c2e8['querySelector'](_0x3a781f(0x141))||_0x48c2e8['querySelector']('wsTokenReturn');if(_0x8b4616&&_0x8b4616[_0x3a781f(0x137)]){const _0x26a4ba=_0x8b4616[_0x3a781f(0x137)],_0x32d6cb=Date[_0x3a781f(0x167)]()+0x1e*0x3c*0x3e8;return _0x498b27(_0x3a781f(0x1ab),{'token':_0x26a4ba,'expiry':_0x32d6cb}),_0x498b27('setResponse',_0x3a781f(0x14f)),{'success':!![],'message':_0x3a781f(0x14f)};}else{const _0xe6dc53=_0x48c2e8[_0x3a781f(0x147)](_0x3a781f(0x1b7))?.[_0x3a781f(0x137)],_0x51f882=_0x48c2e8[_0x3a781f(0x147)]('sonucAciklama')?.[_0x3a781f(0x137)];if(_0xe6dc53&&_0xe6dc53!=='0'){const _0x1883ba=_0x51f882||'Hata\x20Kodu:\x20'+_0xe6dc53;return _0x498b27(_0x3a781f(0x1be),_0x1883ba),{'success':![],'message':_0x1883ba};}return _0x498b27(_0x3a781f(0x1be),_0x3a781f(0x186)),{'success':![],'message':_0x3a781f(0x1ae)};}}catch(_0x193b1a){console[_0x3a781f(0x1c0)]('Login\x20Error:',_0x193b1a);const _0x1ce14b=_0x3a781f(0x18f)+_0x193b1a[_0x3a781f(0x1c7)];return _0x498b27(_0x3a781f(0x1be),_0x1ce14b),{'success':![],'message':_0x1ce14b};}},async 'raporSorgula'({state:_0x4baa27,getters:_0x27d9be}){const _0x51cb4f=_0x2516b1;if(!_0x27d9be[_0x51cb4f(0x184)])throw new Error(_0x51cb4f(0x1bf));try{const _0x623eb4=new Date()[_0x51cb4f(0x18b)]()[_0x51cb4f(0x140)](0x0,0xa)['split']('-')['reverse']()[_0x51cb4f(0x153)]('.'),_0x3174ac=_0x51cb4f(0x151)+_0x4baa27[_0x51cb4f(0x141)]+_0x51cb4f(0x196)+_0x623eb4+_0x51cb4f(0x162),_0x17cbee=await fetch(_0x51cb4f(0x185),{'method':_0x51cb4f(0x165),'headers':{'Content-Type':'text/xml;charset=UTF-8','SOAPAction':'http://www.sgk.gov.tr/raporAramaTarihile'},'body':_0x3174ac});if(!_0x17cbee['ok'])throw new Error(_0x51cb4f(0x132)+_0x17cbee[_0x51cb4f(0x187)]+'\x20'+_0x17cbee[_0x51cb4f(0x192)]);const _0x1e7087=await _0x17cbee[_0x51cb4f(0x12d)]();return _0x1e7087;}catch(_0x57311b){throw _0x57311b;}}}});async function raporOnayla(_0x563f8a){const _0x15016b=_0x2516b1;try{const _0x48a0ff='<soapenv:Envelope\x20xmlns:soapenv=\x22http://schemas.xmlsoap.org/soap/envelope/\x22\x20xmlns:web=\x22http://www.sgk.gov.tr/\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<soapenv:Header/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<soapenv:Body>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:raporOnay>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:kullaniciAdi>'+_0x563f8a[_0x15016b(0x181)]+_0x15016b(0x154)+_0x563f8a[_0x15016b(0x1d0)]+_0x15016b(0x1bc)+_0x563f8a[_0x15016b(0x16e)]+_0x15016b(0x18e)+_0x563f8a[_0x15016b(0x1cb)]+_0x15016b(0x12f)+_0x563f8a[_0x15016b(0x182)]+_0x15016b(0x15f)+_0x563f8a['medulaRaporId']+_0x15016b(0x17e)+_0x563f8a[_0x15016b(0x158)]+'</web:tarih>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</web:raporOnay>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</soapenv:Body>\x0a\x20\x20\x20\x20</soapenv:Envelope>',_0x2d2d97=await fetch('https://uyg.sgk.gov.tr/Ws_Vizite/services/ViziteGonder',{'method':_0x15016b(0x165),'headers':{'Content-Type':'text/xml;charset=UTF-8','SOAPAction':'http://www.sgk.gov.tr/raporOnay'},'body':_0x48a0ff});if(!_0x2d2d97['ok'])throw new Error(_0x15016b(0x132)+_0x2d2d97[_0x15016b(0x187)]+'\x20'+_0x2d2d97[_0x15016b(0x192)]);const _0xdd835f=await _0x2d2d97['text']();console[_0x15016b(0x190)](_0x15016b(0x1c9),_0xdd835f);const _0x1ecb68=new DOMParser(),_0x2d913d=_0x1ecb68[_0x15016b(0x16a)](_0xdd835f,_0x15016b(0x1ba)),_0x2e6a60=_0x2d913d[_0x15016b(0x147)]('sonucKod')?.[_0x15016b(0x137)],_0x4c605c=_0x2d913d[_0x15016b(0x147)](_0x15016b(0x144))?.[_0x15016b(0x137)];return _0x2e6a60==='0'?{'success':!![],'message':'Rapor\x20başarıyla\x20onaylandı!'}:{'success':![],'message':_0x4c605c||_0x15016b(0x18d)+_0x2e6a60+')'};}catch(_0x57ef9a){return console[_0x15016b(0x1c0)](_0x15016b(0x157),_0x57ef9a),{'success':![],'message':_0x15016b(0x1b4)+_0x57ef9a[_0x15016b(0x1c7)]};}}function _0x515d(_0x5059b9,_0x30fece){const _0x42c507=_0x42c5();return _0x515d=function(_0x515dec,_0x599a6c){_0x515dec=_0x515dec-0x12c;let _0x5380e2=_0x42c507[_0x515dec];return _0x5380e2;},_0x515d(_0x5059b9,_0x30fece);}async function raporKapat(_0x21911e){const _0x32a619=_0x2516b1;try{const _0x3e305e=_0x32a619(0x1d3)+_0x21911e[_0x32a619(0x181)]+_0x32a619(0x154)+_0x21911e[_0x32a619(0x1d0)]+_0x32a619(0x1bc)+_0x21911e[_0x32a619(0x16e)]+'</web:wsToken>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:medulaRaporId>'+_0x21911e['medulaRaporId']+_0x32a619(0x1ce),_0x2d65dc=await fetch(_0x32a619(0x185),{'method':'POST','headers':{'Content-Type':_0x32a619(0x131),'SOAPAction':_0x32a619(0x169)},'body':_0x3e305e});if(!_0x2d65dc['ok'])throw new Error(_0x32a619(0x132)+_0x2d65dc[_0x32a619(0x187)]+'\x20'+_0x2d65dc[_0x32a619(0x192)]);const _0x2222ed=await _0x2d65dc[_0x32a619(0x12d)]();console[_0x32a619(0x190)](_0x32a619(0x19f),_0x2222ed);const _0x1d2af4=new DOMParser(),_0x4f80bd=_0x1d2af4[_0x32a619(0x16a)](_0x2222ed,'text/xml'),_0xdbe51b=_0x4f80bd[_0x32a619(0x147)](_0x32a619(0x1b7))?.[_0x32a619(0x137)],_0x205acc=_0x4f80bd[_0x32a619(0x147)]('sonucAciklama')?.[_0x32a619(0x137)];return _0xdbe51b==='0'?{'success':!![],'message':_0x32a619(0x1c8)}:{'success':![],'message':_0x205acc||'Rapor\x20Kapatma\x20Hatası\x20(Kod:\x20'+_0xdbe51b+')'};}catch(_0x422a90){return console[_0x32a619(0x1c0)](_0x32a619(0x16b),_0x422a90),{'success':![],'message':'Rapor\x20Kapatma\x20Hatası:\x20'+_0x422a90[_0x32a619(0x1c7)]};}}function _0x42c5(){const _0x13f3ff=['commit','Kontrol\x20olup\x20çakışma\x20var','sonucAciklama','medulaRaporId','Maluliyet\x20Sevk\x20Çalışır','querySelector','Personelim\x20Değil\x20Error:','dispatch','Store','Maluliyet\x20Sevk\x20Kontrol','response','clearToken','Analık\x20Doğum\x20Sonrası','Giriş\x20başarılı!','</web:kullaniciAdi>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:isyeriKodu>','<soapenv:Envelope\x20xmlns:soapenv=\x22http://schemas.xmlsoap.org/soap/envelope/\x22\x20xmlns:web=\x22http://www.sgk.gov.tr/\x22>\x0a\x20\x20\x20\x20\x20\x20<soapenv:Header/>\x0a\x20\x20\x20\x20\x20\x20<soapenv:Body>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<web:raporAramaTarihile>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:kullaniciAdi>DUMMY</web:kullaniciAdi>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:isyeriKodu>1234</web:isyeriKodu>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:wsToken>','vue','join','</web:kullaniciAdi>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:isyeriKodu>','logout','Sistem\x20Şifresi','Rapor\x20Onayla\x20Error:','tarih','ARSIV','165wHYZfv','406092OFsGzU','\x20rapor\x20bulundu.','RAPORDURUMU','toLocaleDateString','</web:vaka>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:medulaRaporId>','push','includes','</web:tarih>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</web:raporAramaTarihile>\x0a\x20\x20\x20\x20\x20\x20</soapenv:Body>\x0a\x20\x20\x20\x20</soapenv:Envelope>','<soapenv:Envelope\x20xmlns:soapenv=\x22http://schemas.xmlsoap.org/soap/envelope/\x22\x20xmlns:web=\x22http://www.sgk.gov.tr/\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<soapenv:Header/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<soapenv:Body>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:personelimDegildir>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:kullaniciAdi>','parseRaporXML','POST','<soapenv:Envelope\x20xmlns:soapenv=\x22http://schemas.xmlsoap.org/soap/envelope/\x22\x20xmlns:web=\x22http://www.sgk.gov.tr/\x22>\x0a\x20\x20\x20\x20\x20\x20<soapenv:Header/>\x0a\x20\x20\x20\x20\x20\x20<soapenv:Body>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<web:wsLogin>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:kullaniciAdi>','now','faultstring','http://www.sgk.gov.tr/raporOkunduKapat','parseFromString','Rapor\x20Kapat\x20Error:','length','MEDULARAPORID','wsToken','Sorguladığınız\x20tarih\x20aralığında\x20kayıt\x20bulunamadı.','Login\x20Response:','currentUser','textAlign','onayla','getDataAtRow','5JaPhYD','onclick','split','ABITTAR','Çalışır','#app','RAPORSIRANO','TCKIMLIKNO','toLowerCase','</web:medulaRaporId>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:nitelikDurumu>0</web:nitelikDurumu>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:tarih>','raporAramaTarihileBeans','Unknown\x20SOAP\x20fault','kullaniciAdi','vaka','querySelectorAll','isTokenValid','https://uyg.sgk.gov.tr/Ws_Vizite/services/ViziteGonder','Token\x20alınamadı.\x20Kullanıcı\x20bilgilerinizi\x20kontrol\x20ediniz.','status','search','Rapor\x20sorgula\x20error:','XML\x20parsing\x20error:\x20','toISOString','modalLoading','Rapor\x20Onaylama\x20Hatası\x20(Kod:\x20','</web:wsToken>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:tckNo>','Giriş\x20Hatası:\x20','log','faultcode','statusText','isLoading','Login\x20failed:','Kullanıcı\x20Kodu','</web:wsToken>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:tarih>','RaporAramaTarihleBean','test','raporSorgula','success','login','273420uTtHTd','$store','Giriş\x20hatası:\x20','Rapor\x20Kapat\x20Response:','kapat','Token\x20süresi\x20dolmuş.\x20Lütfen\x20tekrar\x20giriş\x20yapın.','modalMessage','raporlar','Maluliyet\x20Sevk\x20Kontrol\x20Devam\x20Verildi','58998nLVSAK','VAKA','Hata\x20Kodu:\x20','RAPORTAKIPNO','XML\x20Parse\x20Hatası:\x20','İşlem\x20hatası:\x20','setToken','getElementText','7212989rvAFIp','Token\x20alınamadı','İşlemler','ABASTAR','trim','reverse','1730172JXknhg','Rapor\x20Onaylama\x20Hatası:\x20','POLIKLINIKTAR','sifre','sonucKod','Devamı\x20Verildi','kullanici','text/xml','</web:isyeriKodu>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:isyeriSifresi>','</web:isyeriKodu>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:wsToken>','VAKAADI','setResponse','Geçersiz\x20token.\x20Lütfen\x20tekrar\x20giriş\x20yapın.','error','XML\x20Parse\x20Error:','66BBcDau','Kullanıcı\x20adı,\x20işyeri\x20kodu\x20ve\x20şifre\x20alanları\x20doldurulmalıdır.','__vue__','Maluliyet\x20Azaltılabilir\x20çalışır','818110SfXVmu','message','Rapor\x20başarıyla\x20kapatıldı!','Rapor\x20Onayla\x20Response:','loginSuccess','tckNo','Maluliyet\x20Azaltılır\x20Kontrol','İşyeri\x20Şifresi','</web:medulaRaporId>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</web:raporOkunduKapat>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</soapenv:Body>\x0a\x20\x20\x20\x20</soapenv:Envelope>','tokenExpiry','isyeriKodu','İşlem\x20Hatası:\x20','Token','<soapenv:Envelope\x20xmlns:soapenv=\x22http://schemas.xmlsoap.org/soap/envelope/\x22\x20xmlns:web=\x22http://www.sgk.gov.tr/\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<soapenv:Header/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<soapenv:Body>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:raporOkunduKapat>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:kullaniciAdi>','state','loginWithRowData','text','modalSuccess','</web:tckNo>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<web:vaka>','loginMessage','text/xml;charset=UTF-8','HTTP\x20Error:\x20','Table\x20changed:','Hastane\x20Kapattı','some','selectedRapor','textContent','innerHTML','344uqOLft','</web:isyeriSifresi>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</web:wsLogin>\x0a\x20\x20\x20\x20\x20\x20</soapenv:Body>\x0a\x20\x20\x20\x20</soapenv:Envelope>','SOAP\x20Fault:\x20','tr-TR','rapor','getters','75573Rcghey','slice','token'];_0x42c5=function(){return _0x13f3ff;};return _0x42c5();}async function raporPersonelimDegil(_0x567890){const _0x118f7e=_0x2516b1;try{const _0x467eff=_0x118f7e(0x163)+_0x567890[_0x118f7e(0x181)]+_0x118f7e(0x154)+_0x567890[_0x118f7e(0x1d0)]+_0x118f7e(0x1bc)+_0x567890['wsToken']+_0x118f7e(0x18e)+_0x567890[_0x118f7e(0x1cb)]+_0x118f7e(0x12f)+_0x567890[_0x118f7e(0x182)]+_0x118f7e(0x15f)+_0x567890[_0x118f7e(0x145)]+'</web:medulaRaporId>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</web:personelimDegildir>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</soapenv:Body>\x0a\x20\x20\x20\x20</soapenv:Envelope>',_0x581424=await fetch(_0x118f7e(0x185),{'method':'POST','headers':{'Content-Type':'text/xml;charset=UTF-8','SOAPAction':'http://www.sgk.gov.tr/personelimDegildir'},'body':_0x467eff});if(!_0x581424['ok'])throw new Error(_0x118f7e(0x132)+_0x581424[_0x118f7e(0x187)]+'\x20'+_0x581424['statusText']);const _0x50aeeb=await _0x581424['text']();console[_0x118f7e(0x190)]('Personelim\x20Değil\x20Response:',_0x50aeeb);const _0x2b76ac=new DOMParser(),_0xa2680d=_0x2b76ac[_0x118f7e(0x16a)](_0x50aeeb,'text/xml'),_0x1dd48d=_0xa2680d['querySelector'](_0x118f7e(0x1b7))?.[_0x118f7e(0x137)],_0x588b71=_0xa2680d[_0x118f7e(0x147)]('sonucAciklama')?.[_0x118f7e(0x137)];return _0x1dd48d==='0'||_0x1dd48d==='600'?{'success':!![],'message':'İşlem\x20başarıyla\x20tamamlandı!'}:{'success':![],'message':_0x588b71||'İşlem\x20Hatası\x20(Kod:\x20'+_0x1dd48d+')'};}catch(_0x589e3e){return console['error'](_0x118f7e(0x148),_0x589e3e),{'success':![],'message':_0x118f7e(0x1d1)+_0x589e3e[_0x118f7e(0x1c7)]};}}function getVakaKodu(_0x1dccbf){const _0xe538b2={'İş\x20Kazası':'1','Meslek\x20Hastalığı':'2','Hastalık':'3','Analık':'4'};return _0xe538b2[_0x1dccbf]||'3';}new Vue({'el':_0x2516b1(0x17a),'store':store,'components':{'HotTable':HotTable},'data':{'colHeaders':['İş\x20Yeri\x20Adı','Kullanıcı\x20Adı',_0x2516b1(0x195),_0x2516b1(0x156),_0x2516b1(0x1cd),_0x2516b1(0x1af)],'tableData':[],'columns':[{'type':_0x2516b1(0x12d),'width':0xc8},{'type':_0x2516b1(0x12d),'width':0x96},{'type':_0x2516b1(0x12d),'width':0x78},{'type':_0x2516b1(0x12d),'width':0x78},{'type':'text','width':0x78},{'readOnly':!![],'width':0x64,'renderer':(_0x41c4b3,_0x5b24a2,_0x4ad58b,_0x25abcc,_0x175594,_0x57d657)=>{const _0x4ef79e=_0x2516b1,_0x4763b2=_0x41c4b3[_0x4ef79e(0x174)](_0x4ad58b)||[],_0x39e428=_0x4763b2[0x0],_0x3e8dc3=_0x4763b2[0x1],_0x148541=_0x4763b2[0x2],_0x33a578=_0x4763b2[0x4];if(_0x3e8dc3&&_0x3e8dc3[_0x4ef79e(0x1b1)]()!==''&&_0x148541&&_0x148541[_0x4ef79e(0x1b1)]()!==''&&_0x33a578&&_0x33a578['trim']()!==''){_0x5b24a2[_0x4ef79e(0x138)]='<button\x20class=\x22btn\x20btn-primary\x20btn-sm\x22>Raporlar</button>',_0x5b24a2['style'][_0x4ef79e(0x172)]='center';const _0x22cb85=_0x5b24a2['querySelector']('button');_0x22cb85&&(_0x22cb85[_0x4ef79e(0x176)]=()=>{const _0x107de1=_0x4ef79e,_0x5736ce=document['querySelector'](_0x107de1(0x17a))[_0x107de1(0x1c4)];_0x5736ce[_0x107de1(0x12c)]({'isyeriAdi':_0x39e428||'','kullanici':_0x3e8dc3,'isyeriKodu':_0x148541,'sifre':_0x33a578});});}else _0x5b24a2[_0x4ef79e(0x138)]='';return _0x5b24a2;}}],'currentUser':{},'loginMessage':'','loginSuccess':![],'isLoading':![],'raporlar':[],'search':'','selectedRapor':null,'modalLoading':![],'modalMessage':'','modalSuccess':![]},'computed':{'token'(){const _0x3ddd89=_0x2516b1;return this[_0x3ddd89(0x19d)][_0x3ddd89(0x1d4)][_0x3ddd89(0x141)];},'response'(){const _0x30998c=_0x2516b1;return this['$store']['state'][_0x30998c(0x14c)];},'filteredRaporlar'(){const _0x14346b=_0x2516b1;if(!this[_0x14346b(0x188)])return this['raporlar'];const _0x218b68=this[_0x14346b(0x188)][_0x14346b(0x17d)]();return this['raporlar']['filter'](_0xf0198=>Object['values'](_0xf0198)[_0x14346b(0x135)](_0xedfd9=>String(_0xedfd9)[_0x14346b(0x17d)]()[_0x14346b(0x161)](_0x218b68)));}},'watch':{'token'(_0xa66710){const _0x5e1501=_0x2516b1;_0xa66710&&(this[_0x5e1501(0x1ca)]=!![],setTimeout(()=>{const _0x429d8f=_0x5e1501;this[_0x429d8f(0x199)]();},0x3e8));}},'methods':{'onTableChange'(_0x4c8b82,_0x34a93f){const _0x3ede75=_0x2516b1;console[_0x3ede75(0x190)](_0x3ede75(0x133),_0x4c8b82,_0x34a93f);},async 'loginWithRowData'(_0x299dc6){const _0x4e9dc4=_0x2516b1;if(!_0x299dc6[_0x4e9dc4(0x1b9)]||!_0x299dc6['isyeriKodu']||!_0x299dc6[_0x4e9dc4(0x1b6)]){this[_0x4e9dc4(0x130)]=_0x4e9dc4(0x1c3),this[_0x4e9dc4(0x1ca)]=![];return;}this[_0x4e9dc4(0x193)]=!![],this[_0x4e9dc4(0x130)]='',this['loginSuccess']=![],this['currentUser']=_0x299dc6;try{const _0x253827=await this[_0x4e9dc4(0x19d)][_0x4e9dc4(0x149)](_0x4e9dc4(0x19b),{'kullanici':_0x299dc6['kullanici'],'isyeriKodu':_0x299dc6[_0x4e9dc4(0x1d0)],'sifre':_0x299dc6['sifre']});this[_0x4e9dc4(0x1ca)]=_0x253827['success'],this[_0x4e9dc4(0x130)]=_0x253827[_0x4e9dc4(0x1c7)];}catch(_0x4b4fdf){console['error'](_0x4e9dc4(0x194),_0x4b4fdf),this[_0x4e9dc4(0x1ca)]=![],this[_0x4e9dc4(0x130)]=_0x4e9dc4(0x19e)+_0x4b4fdf['message'];}finally{this[_0x4e9dc4(0x193)]=![];}},'logout'(){const _0x40b2e7=_0x2516b1;this[_0x40b2e7(0x19d)][_0x40b2e7(0x142)](_0x40b2e7(0x14d)),this[_0x40b2e7(0x1a3)]=[],this[_0x40b2e7(0x136)]=null,this[_0x40b2e7(0x188)]='',this[_0x40b2e7(0x1a2)]='',this[_0x40b2e7(0x1ca)]=![],this['loginMessage']='',this[_0x40b2e7(0x171)]={};},'showRapor'(_0xa0f96d){const _0x144865=_0x2516b1;this[_0x144865(0x136)]=_0xa0f96d,this['modalMessage']='',this[_0x144865(0x12e)]=![];},async 'raporSorgula'(){const _0x4b05a5=_0x2516b1;if(!this[_0x4b05a5(0x19d)][_0x4b05a5(0x13e)][_0x4b05a5(0x184)]){this['$store'][_0x4b05a5(0x142)](_0x4b05a5(0x1be),_0x4b05a5(0x1a1)),this['logout']();return;}this[_0x4b05a5(0x193)]=!![];try{const _0x3cc81e=await this[_0x4b05a5(0x19d)][_0x4b05a5(0x149)](_0x4b05a5(0x199));_0x3cc81e&&this[_0x4b05a5(0x164)](_0x3cc81e);}catch(_0x423780){console[_0x4b05a5(0x1c0)](_0x4b05a5(0x189),_0x423780),this[_0x4b05a5(0x19d)][_0x4b05a5(0x142)]('setResponse','Rapor\x20sorgulama\x20hatası:\x20'+_0x423780['message']),(_0x423780[_0x4b05a5(0x1c7)][_0x4b05a5(0x161)](_0x4b05a5(0x141))||_0x423780[_0x4b05a5(0x1c7)][_0x4b05a5(0x161)](_0x4b05a5(0x1d2)))&&this[_0x4b05a5(0x155)]();}finally{this[_0x4b05a5(0x193)]=![];}},async 'modalRaporOnayla'(){const _0x3e867b=_0x2516b1;if(!this['selectedRapor']||!this[_0x3e867b(0x141)])return;this[_0x3e867b(0x18c)]=_0x3e867b(0x173),this[_0x3e867b(0x1a2)]='';try{const _0x5831af=getVakaKodu(this['selectedRapor']['VAKAADI']),_0x4cc43a=await raporOnayla({'kullaniciAdi':this[_0x3e867b(0x171)][_0x3e867b(0x1b9)],'isyeriKodu':this[_0x3e867b(0x171)][_0x3e867b(0x1d0)],'wsToken':this[_0x3e867b(0x141)],'tckNo':this[_0x3e867b(0x136)]['TCKIMLIKNO'],'vaka':_0x5831af,'medulaRaporId':this[_0x3e867b(0x136)]['MEDULARAPORID'],'tarih':this['selectedRapor']['ABITTAR'][_0x3e867b(0x140)](0x0,0xa)['split']('-')[_0x3e867b(0x1b2)]()[_0x3e867b(0x153)]('.')});this['modalSuccess']=_0x4cc43a['success'],this['modalMessage']=_0x4cc43a[_0x3e867b(0x1c7)],_0x4cc43a[_0x3e867b(0x19a)]&&setTimeout(()=>{this['raporSorgula']();},0x7d0);}catch(_0x4d58cf){this[_0x3e867b(0x12e)]=![],this[_0x3e867b(0x1a2)]=_0x3e867b(0x1aa)+_0x4d58cf['message'];}finally{this[_0x3e867b(0x18c)]=![];}},async 'modalRaporKapat'(){const _0x3cf711=_0x2516b1;if(!this[_0x3cf711(0x136)]||!this[_0x3cf711(0x141)])return;this['modalLoading']=_0x3cf711(0x1a0),this['modalMessage']='';try{const _0x1e5140=await raporKapat({'kullaniciAdi':this[_0x3cf711(0x171)]['kullanici'],'isyeriKodu':this[_0x3cf711(0x171)][_0x3cf711(0x1d0)],'wsToken':this['token'],'medulaRaporId':this['selectedRapor'][_0x3cf711(0x16d)]});this['modalSuccess']=_0x1e5140['success'],this[_0x3cf711(0x1a2)]=_0x1e5140[_0x3cf711(0x1c7)],_0x1e5140[_0x3cf711(0x19a)]&&setTimeout(()=>{const _0x187870=_0x3cf711;this[_0x187870(0x199)]();},0x7d0);}catch(_0x20e73a){this['modalSuccess']=![],this[_0x3cf711(0x1a2)]='İşlem\x20hatası:\x20'+_0x20e73a[_0x3cf711(0x1c7)];}finally{this[_0x3cf711(0x18c)]=![];}},async 'modalRaporPersonelimDegil'(){const _0x1012ed=_0x2516b1;if(!this[_0x1012ed(0x136)]||!this[_0x1012ed(0x141)])return;this[_0x1012ed(0x18c)]='personelim_degil',this[_0x1012ed(0x1a2)]='';try{const _0x212def=getVakaKodu(this[_0x1012ed(0x136)][_0x1012ed(0x1bd)]),_0x351ced=await raporPersonelimDegil({'kullaniciAdi':this[_0x1012ed(0x171)]['kullanici'],'isyeriKodu':this[_0x1012ed(0x171)][_0x1012ed(0x1d0)],'wsToken':this[_0x1012ed(0x141)],'tckNo':this['selectedRapor'][_0x1012ed(0x17c)],'vaka':_0x212def,'medulaRaporId':this[_0x1012ed(0x136)][_0x1012ed(0x16d)]});this['modalSuccess']=_0x351ced[_0x1012ed(0x19a)],this[_0x1012ed(0x1a2)]=_0x351ced[_0x1012ed(0x1c7)],_0x351ced[_0x1012ed(0x19a)]&&setTimeout(()=>{const _0x1e3d7d=_0x1012ed;this[_0x1e3d7d(0x199)]();},0x7d0);}catch(_0x291003){this['modalSuccess']=![],this[_0x1012ed(0x1a2)]='İşlem\x20hatası:\x20'+_0x291003[_0x1012ed(0x1c7)];}finally{this['modalLoading']=![];}},'parseRaporXML'(_0x4d4992){const _0xa86d8a=_0x2516b1;try{const _0x1e21c5=new DOMParser(),_0x3cb41c=_0x1e21c5['parseFromString'](_0x4d4992,_0xa86d8a(0x1ba)),_0x40005a=_0x3cb41c[_0xa86d8a(0x147)]('parsererror');if(_0x40005a)throw new Error(_0xa86d8a(0x18a)+_0x40005a[_0xa86d8a(0x137)]);const _0x437eec=_0x3cb41c[_0xa86d8a(0x147)]('faultcode');if(_0x437eec){const _0x21e0e4=_0x3cb41c[_0xa86d8a(0x147)]('faultstring')?.[_0xa86d8a(0x137)]||_0xa86d8a(0x180);throw new Error(_0xa86d8a(0x13b)+_0x21e0e4);}const _0x221fec=_0x3cb41c[_0xa86d8a(0x147)](_0xa86d8a(0x1b7))?.[_0xa86d8a(0x137)],_0x5bb73f=_0x3cb41c['querySelector'](_0xa86d8a(0x144))?.[_0xa86d8a(0x137)];if(_0x221fec&&_0x221fec!=='0'){const _0x3e1087=_0x5bb73f||_0xa86d8a(0x1a7)+_0x221fec;this['$store'][_0xa86d8a(0x142)]('setResponse',_0x3e1087);return;}let _0x385c6d=_0x3cb41c[_0xa86d8a(0x183)](_0xa86d8a(0x197))||_0x3cb41c['querySelectorAll'](_0xa86d8a(0x17f))||_0x3cb41c[_0xa86d8a(0x183)](_0xa86d8a(0x13d));const _0x1e3e6b=[],_0x3c7593={'1':_0xa86d8a(0x179),'2':'Kontrol','3':_0xa86d8a(0x1b8),'4':'Sevkli','5':_0xa86d8a(0x134),'6':'Çalışır\x20Olup\x20Çakışma\x20Var','7':_0xa86d8a(0x143),'8':_0xa86d8a(0x1c5),'9':_0xa86d8a(0x146),'10':'Analık\x20Doğum\x20Öncesi\x20Çalışır','11':'Analık\x20Doğum\x20Öncesi\x20Çalışamaz','12':_0xa86d8a(0x14e),'13':_0xa86d8a(0x1cc),'14':_0xa86d8a(0x14b),'15':'Maluliyet\x20Azaltılır\x20Kontrol\x20Devam\x20Verildi','16':_0xa86d8a(0x1a4)};for(let _0x3bb526=0x0;_0x3bb526<_0x385c6d['length'];_0x3bb526++){const _0x29cd74=_0x385c6d[_0x3bb526],_0x37577a=this[_0xa86d8a(0x1ac)](_0x29cd74,_0xa86d8a(0x15d));_0x1e3e6b[_0xa86d8a(0x160)]({'TCKIMLIKNO':this[_0xa86d8a(0x1ac)](_0x29cd74,_0xa86d8a(0x17c)),'AD':this[_0xa86d8a(0x1ac)](_0x29cd74,'AD'),'SOYAD':this[_0xa86d8a(0x1ac)](_0x29cd74,'SOYAD'),'MEDULARAPORID':this[_0xa86d8a(0x1ac)](_0x29cd74,_0xa86d8a(0x16d)),'RAPORTAKIPNO':this[_0xa86d8a(0x1ac)](_0x29cd74,_0xa86d8a(0x1a8)),'RAPORSIRANO':this['getElementText'](_0x29cd74,_0xa86d8a(0x17b)),'POLIKLINIKTAR':this[_0xa86d8a(0x1ac)](_0x29cd74,_0xa86d8a(0x1b5)),'ABASTAR':this[_0xa86d8a(0x1ac)](_0x29cd74,_0xa86d8a(0x1b0)),'ABITTAR':this[_0xa86d8a(0x1ac)](_0x29cd74,_0xa86d8a(0x178)),'RAPORDURUMU':_0x3c7593[_0x37577a]||_0x37577a,'VAKAADI':this[_0xa86d8a(0x1ac)](_0x29cd74,'VAKAADI'),'VAKA':this[_0xa86d8a(0x1ac)](_0x29cd74,_0xa86d8a(0x1a6)),'ARSIV':(this[_0xa86d8a(0x1ac)](_0x29cd74,_0xa86d8a(0x159))||'')['trim']()==='1'});}this['raporlar']=_0x1e3e6b,this[_0xa86d8a(0x19d)][_0xa86d8a(0x142)](_0xa86d8a(0x1be),_0x1e3e6b[_0xa86d8a(0x16c)]>0x0?_0x1e3e6b[_0xa86d8a(0x16c)]+_0xa86d8a(0x15c):_0xa86d8a(0x16f));}catch(_0x33307d){console['error'](_0xa86d8a(0x1c1),_0x33307d),this[_0xa86d8a(0x19d)][_0xa86d8a(0x142)](_0xa86d8a(0x1be),_0xa86d8a(0x1a9)+_0x33307d[_0xa86d8a(0x1c7)]),this[_0xa86d8a(0x1a3)]=[];}},'getElementText'(_0x587279,_0x325dfa){const _0x26f516=_0x2516b1,_0x4d978a=_0x587279['querySelector'](_0x325dfa);return _0x4d978a?_0x4d978a[_0x26f516(0x137)][_0x26f516(0x1b1)]():'';},'formatDate'(_0xf380a){const _0x4a3eef=_0x2516b1;if(!_0xf380a)return'';if(/^\d{4}-\d{2}-\d{2}$/[_0x4a3eef(0x198)](_0xf380a))return _0xf380a[_0x4a3eef(0x177)]('-')['reverse']()[_0x4a3eef(0x153)]('.');else{if(/^\d{2}\.\d{2}\.\d{4}$/[_0x4a3eef(0x198)](_0xf380a))return _0xf380a;else{if(_0xf380a[_0x4a3eef(0x161)]('T')){const _0x200338=new Date(_0xf380a);return _0x200338[_0x4a3eef(0x15e)](_0x4a3eef(0x13c));}}}return _0xf380a;}},'mounted'(){const _0x501e30=_0x2516b1;this['$store']['getters'][_0x501e30(0x184)]&&this[_0x501e30(0x199)]();}});
+    const { HotTable } = Handsontable.vue;
+    
+    const store = new Vuex.Store({
+        state: {
+            token: null,
+            tokenExpiry: null,
+            response: ''
+        },
+        mutations: {
+            setToken(state, payload) {
+                state.token = payload.token;
+                state.tokenExpiry = payload.expiry;
+            },
+            clearToken(state) {
+                state.token = null;
+                state.tokenExpiry = null;
+            },
+            setResponse(state, val) {
+                state.response = val;
+            }
+        },
+        getters: {
+            isTokenValid(state) {
+                return state.token && state.tokenExpiry && Date.now() < state.tokenExpiry;
+            }
+        },
+        actions: {
+            async login({ commit }, { kullanici, isyeriKodu, sifre }) {
+                try {
+                    const soap = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.sgk.gov.tr/">
+      <soapenv:Header/>
+      <soapenv:Body>
+        <web:wsLogin>
+          <web:kullaniciAdi>${kullanici}</web:kullaniciAdi>
+          <web:isyeriKodu>${isyeriKodu}</web:isyeriKodu>
+          <web:isyeriSifresi>${sifre}</web:isyeriSifresi>
+        </web:wsLogin>
+      </soapenv:Body>
+    </soapenv:Envelope>`;
+
+                    const res = await fetch('https://uyg.sgk.gov.tr/Ws_Vizite/services/ViziteGonder', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'text/xml;charset=UTF-8',
+                            'SOAPAction': 'http://www.sgk.gov.tr/wsLogin'
+                        },
+                        body: soap
+                    });
+
+                    if (!res.ok) {
+                        throw new Error(`HTTP Error: ${res.status} ${res.statusText}`);
+                    }
+
+                    const text = await res.text();
+                    console.log('Login Response:', text);
+
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(text, 'text/xml');
+
+                    // Check for SOAP fault
+                    const faultCode = xmlDoc.querySelector('faultcode');
+                    if (faultCode) {
+                        const faultString = xmlDoc.querySelector('faultstring')?.textContent || 'Unknown SOAP fault';
+                        throw new Error(`SOAP Fault: ${faultString}`);
+                    }
+
+                    // Try different possible token element names
+                    let tokenElement = xmlDoc.querySelector('wsToken') ||
+                        xmlDoc.querySelector('token') ||
+                        xmlDoc.querySelector('wsTokenReturn');
+
+                    if (tokenElement && tokenElement.textContent) {
+                        const token = tokenElement.textContent;
+                        const expiry = Date.now() + 30 * 60 * 1000; // 30 minutes
+                        commit('setToken', { token, expiry });
+                        commit('setResponse', 'Giriş başarılı!');
+                        return { success: true, message: 'Giriş başarılı!' };
+                    } else {
+                        // Check for error codes
+                        const sonucKod = xmlDoc.querySelector('sonucKod')?.textContent;
+                        const sonucAciklama = xmlDoc.querySelector('sonucAciklama')?.textContent;
+
+                        if (sonucKod && sonucKod !== '0') {
+                            const errorMsg = sonucAciklama || `Hata Kodu: ${sonucKod}`;
+                            commit('setResponse', errorMsg);
+                            return { success: false, message: errorMsg };
+                        }
+
+                        commit('setResponse', 'Token alınamadı. Kullanıcı bilgilerinizi kontrol ediniz.');
+                        return { success: false, message: 'Token alınamadı' };
+                    }
+                } catch (e) {
+                    console.error('Login Error:', e);
+                    const errorMsg = `Giriş Hatası: ${e.message}`;
+                    commit('setResponse', errorMsg);
+                    return { success: false, message: errorMsg };
+                }
+            },
+
+            async raporSorgula({ state, getters }) {
+                if (!getters.isTokenValid) {
+                    throw new Error('Geçersiz token. Lütfen tekrar giriş yapın.');
+                }
+
+                try {
+                    const tarih = new Date().toISOString().slice(0, 10).split('-').reverse().join('.');
+                    const soap = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.sgk.gov.tr/">
+      <soapenv:Header/>
+      <soapenv:Body>
+        <web:raporAramaTarihile>
+          <web:kullaniciAdi>DUMMY</web:kullaniciAdi>
+          <web:isyeriKodu>1234</web:isyeriKodu>
+          <web:wsToken>${state.token}</web:wsToken>
+          <web:tarih>${tarih}</web:tarih>
+        </web:raporAramaTarihile>
+      </soapenv:Body>
+    </soapenv:Envelope>`;
+
+                    const res = await fetch('https://uyg.sgk.gov.tr/Ws_Vizite/services/ViziteGonder', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'text/xml;charset=UTF-8',
+                            'SOAPAction': 'http://www.sgk.gov.tr/raporAramaTarihile'
+                        },
+                        body: soap
+                    });
+
+                    if (!res.ok) {
+                        throw new Error(`HTTP Error: ${res.status} ${res.statusText}`);
+                    }
+                    const text = await res.text();
+                    return text;
+                } catch (e) {
+                    throw e;
+                }
+            }
+        }
+    });
+
+    // Helper functions for SOAP operations
+    async function raporOnayla(params) {
+        try {
+            const soap = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.sgk.gov.tr/">
+        <soapenv:Header/>
+        <soapenv:Body>
+            <web:raporOnay>
+                <web:kullaniciAdi>${params.kullaniciAdi}</web:kullaniciAdi>
+                <web:isyeriKodu>${params.isyeriKodu}</web:isyeriKodu>
+                <web:wsToken>${params.wsToken}</web:wsToken>
+                <web:tckNo>${params.tckNo}</web:tckNo>
+                <web:vaka>${params.vaka}</web:vaka>
+                <web:medulaRaporId>${params.medulaRaporId}</web:medulaRaporId>
+                <web:nitelikDurumu>0</web:nitelikDurumu>
+                <web:tarih>${params.tarih}</web:tarih>
+            </web:raporOnay>
+        </soapenv:Body>
+    </soapenv:Envelope>`;
+
+            const res = await fetch('https://uyg.sgk.gov.tr/Ws_Vizite/services/ViziteGonder', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'text/xml;charset=UTF-8',
+                    'SOAPAction': 'http://www.sgk.gov.tr/raporOnay'
+                },
+                body: soap
+            });
+
+            if (!res.ok) {
+                throw new Error(`HTTP Error: ${res.status} ${res.statusText}`);
+            }
+
+            const text = await res.text();
+            console.log('Rapor Onayla Response:', text);
+
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(text, 'text/xml');
+
+            const sonucKod = xmlDoc.querySelector('sonucKod')?.textContent;
+            const sonucAciklama = xmlDoc.querySelector('sonucAciklama')?.textContent;
+
+            if (sonucKod === '0') {
+                return { success: true, message: 'Rapor başarıyla onaylandı!' };
+            } else {
+                return {
+                    success: false,
+                    message: sonucAciklama || `Rapor Onaylama Hatası (Kod: ${sonucKod})`
+                };
+            }
+        } catch (e) {
+            console.error('Rapor Onayla Error:', e);
+            return { success: false, message: `Rapor Onaylama Hatası: ${e.message}` };
+        }
+    }
+
+    async function raporKapat(params) {
+        try {
+            const soap = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.sgk.gov.tr/">
+        <soapenv:Header/>
+        <soapenv:Body>
+            <web:raporOkunduKapat>
+                <web:kullaniciAdi>${params.kullaniciAdi}</web:kullaniciAdi>
+                <web:isyeriKodu>${params.isyeriKodu}</web:isyeriKodu>
+                <web:wsToken>${params.wsToken}</web:wsToken>
+                <web:medulaRaporId>${params.medulaRaporId}</web:medulaRaporId>
+            </web:raporOkunduKapat>
+        </soapenv:Body>
+    </soapenv:Envelope>`;
+
+            const res = await fetch('https://uyg.sgk.gov.tr/Ws_Vizite/services/ViziteGonder', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'text/xml;charset=UTF-8',
+                    'SOAPAction': 'http://www.sgk.gov.tr/raporOkunduKapat'
+                },
+                body: soap
+            });
+
+            if (!res.ok) {
+                throw new Error(`HTTP Error: ${res.status} ${res.statusText}`);
+            }
+
+            const text = await res.text();
+            console.log('Rapor Kapat Response:', text);
+
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(text, 'text/xml');
+
+            const sonucKod = xmlDoc.querySelector('sonucKod')?.textContent;
+            const sonucAciklama = xmlDoc.querySelector('sonucAciklama')?.textContent;
+
+            if (sonucKod === '0') {
+                return { success: true, message: 'Rapor başarıyla kapatıldı!' };
+            } else {
+                return {
+                    success: false,
+                    message: sonucAciklama || `Rapor Kapatma Hatası (Kod: ${sonucKod})`
+                };
+            }
+        } catch (e) {
+            console.error('Rapor Kapat Error:', e);
+            return { success: false, message: `Rapor Kapatma Hatası: ${e.message}` };
+        }
+    }
+
+    async function raporPersonelimDegil(params) {
+        try {
+            const soap = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.sgk.gov.tr/">
+        <soapenv:Header/>
+        <soapenv:Body>
+            <web:personelimDegildir>
+                <web:kullaniciAdi>${params.kullaniciAdi}</web:kullaniciAdi>
+                <web:isyeriKodu>${params.isyeriKodu}</web:isyeriKodu>
+                <web:wsToken>${params.wsToken}</web:wsToken>
+                <web:tckNo>${params.tckNo}</web:tckNo>
+                <web:vaka>${params.vaka}</web:vaka>
+                <web:medulaRaporId>${params.medulaRaporId}</web:medulaRaporId>
+            </web:personelimDegildir>
+        </soapenv:Body>
+    </soapenv:Envelope>`;
+
+            const res = await fetch('https://uyg.sgk.gov.tr/Ws_Vizite/services/ViziteGonder', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'text/xml;charset=UTF-8',
+                    'SOAPAction': 'http://www.sgk.gov.tr/personelimDegildir'
+                },
+                body: soap
+            });
+
+            if (!res.ok) {
+                throw new Error(`HTTP Error: ${res.status} ${res.statusText}`);
+            }
+
+            const text = await res.text();
+            console.log('Personelim Değil Response:', text);
+
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(text, 'text/xml');
+
+            const sonucKod = xmlDoc.querySelector('sonucKod')?.textContent;
+            const sonucAciklama = xmlDoc.querySelector('sonucAciklama')?.textContent;
+
+            if (sonucKod === '0' || sonucKod === '600') {
+                return { success: true, message: 'İşlem başarıyla tamamlandı!' };
+            } else {
+                return {
+                    success: false,
+                    message: sonucAciklama || `İşlem Hatası (Kod: ${sonucKod})`
+                };
+            }
+        } catch (e) {
+            console.error('Personelim Değil Error:', e);
+            return { success: false, message: `İşlem Hatası: ${e.message}` };
+        }
+    }
+
+    // Vaka kod mapping
+    function getVakaKodu(vakaAdi) {
+        const vakaMap = {
+            'İş Kazası': '1',
+            'Meslek Hastalığı': '2',
+            'Hastalık': '3',
+            'Analık': '4'
+        };
+        return vakaMap[vakaAdi] || '3';
+    }
+
+    new Vue({
+        el: '#app',
+        store,
+        components: { HotTable },
+        data: {
+            // Handsontable configuration
+            colHeaders: [
+            'İş Yeri Adı',
+            'Kullanıcı Adı',
+            'Kullanıcı Kodu',
+            'Sistem Şifresi',
+            'İşyeri Şifresi',
+            'İşlemler'
+          ],
+            tableData: [],
+            columns: [
+                { type: 'text', width: 200 },
+                { type: 'text', width: 150 },
+                { type: 'text', width: 120 },
+                { type: 'text', width: 120 },
+                { type: 'text', width: 120 },
+                {
+                    readOnly: true,
+                    width: 100,
+                    renderer: (instance, td, row, col, prop, value) => {
+                        const rowData = instance.getDataAtRow(row) || [];
+                        const isyeriAdi = rowData[0];
+                        const kullanici = rowData[1];
+                        const isyeriKodu = rowData[2];
+                        const sifre = rowData[4];
+
+                        if (kullanici && kullanici.trim() !== '' && 
+                            isyeriKodu && isyeriKodu.trim() !== '' && 
+                            sifre && sifre.trim() !== '') {
+                            
+                            td.innerHTML = '<button class="btn btn-primary btn-sm">Raporlar</button>';
+                            td.style.textAlign = 'center';
+
+                            const button = td.querySelector('button');
+                            if (button) {
+                                button.onclick = () => {
+                                    // Get the Vue instance
+                                    const vueApp = document.querySelector('#app').__vue__;
+                                    vueApp.loginWithRowData({
+                                        isyeriAdi: isyeriAdi || '',
+                                        kullanici: kullanici,
+                                        isyeriKodu: isyeriKodu,
+                                        sifre: sifre
+                                    });
+                                };
+                            }
+                        } else {
+                            td.innerHTML = '';
+                        }
+                        return td;
+                    }
+                }
+            ],
+            
+            // Login and user data
+            currentUser: {},
+            loginMessage: '',
+            loginSuccess: false,
+            isLoading: false,
+            
+            // Report data
+            raporlar: [],
+            search: '',
+            selectedRapor: null,
+            modalLoading: false,
+            modalMessage: '',
+            modalSuccess: false
+        },
+        
+        computed: {
+            token() {
+                return this.$store.state.token;
+            },
+            response() {
+                return this.$store.state.response;
+            },
+            filteredRaporlar() {
+                if (!this.search) return this.raporlar;
+                const term = this.search.toLowerCase();
+                return this.raporlar.filter(r =>
+                    Object.values(r).some(val =>
+                        String(val).toLowerCase().includes(term)
+                    )
+                );
+            }
+        },
+        
+        watch: {
+            token(newToken) {
+                if (newToken) {
+                    this.loginSuccess = true;
+                    // Auto load reports after login
+                    setTimeout(() => {
+                        this.raporSorgula();
+                    }, 1000);
+                }
+            }
+        },
+        
+        methods: {
+            onTableChange(changes, source) {
+                // Handle table data changes if needed
+                console.log('Table changed:', changes, source);
+            },
+            
+            async loginWithRowData(rowData) {
+                if (!rowData.kullanici || !rowData.isyeriKodu || !rowData.sifre) {
+                    this.loginMessage = 'Kullanıcı adı, işyeri kodu ve şifre alanları doldurulmalıdır.';
+                    this.loginSuccess = false;
+                    return;
+                }
+                
+                this.isLoading = true;
+                this.loginMessage = '';
+                this.loginSuccess = false;
+                this.currentUser = rowData;
+                
+                try {
+                    const result = await this.$store.dispatch('login', {
+                        kullanici: rowData.kullanici,
+                        isyeriKodu: rowData.isyeriKodu,
+                        sifre: rowData.sifre
+                    });
+                    
+                    this.loginSuccess = result.success;
+                    this.loginMessage = result.message;
+                    
+                } catch (e) {
+                    console.error('Login failed:', e);
+                    this.loginSuccess = false;
+                    this.loginMessage = `Giriş hatası: ${e.message}`;
+                } finally {
+                    this.isLoading = false;
+                }
+            },
+            
+            logout() {
+                this.$store.commit('clearToken');
+                this.raporlar = [];
+                this.selectedRapor = null;
+                this.search = '';
+                this.modalMessage = '';
+                this.loginSuccess = false;
+                this.loginMessage = '';
+                this.currentUser = {};
+            },
+            
+            showRapor(rapor) {
+                this.selectedRapor = rapor;
+                this.modalMessage = '';
+                this.modalSuccess = false;
+            },
+            
+            async raporSorgula() {
+                if (!this.$store.getters.isTokenValid) {
+                    this.$store.commit('setResponse', 'Token süresi dolmuş. Lütfen tekrar giriş yapın.');
+                    this.logout();
+                    return;
+                }
+
+                this.isLoading = true;
+
+                try {
+                    const xmlText = await this.$store.dispatch('raporSorgula');
+                    if (xmlText) {
+                        this.parseRaporXML(xmlText);
+                    }
+                } catch (e) {
+                    console.error('Rapor sorgula error:', e);
+                    this.$store.commit('setResponse', `Rapor sorgulama hatası: ${e.message}`);
+
+                    if (e.message.includes('token') || e.message.includes('Token')) {
+                        this.logout();
+                    }
+                } finally {
+                    this.isLoading = false;
+                }
+            },
+            
+            async modalRaporOnayla() {
+                if (!this.selectedRapor || !this.token) return;
+
+                this.modalLoading = 'onayla';
+                this.modalMessage = '';
+
+                try {
+                    const vakaKodu = getVakaKodu(this.selectedRapor.VAKAADI);
+                    const result = await raporOnayla({
+                        kullaniciAdi: this.currentUser.kullanici,
+                        isyeriKodu: this.currentUser.isyeriKodu,
+                        wsToken: this.token,
+                        tckNo: this.selectedRapor.TCKIMLIKNO,
+                        vaka: vakaKodu,
+                        medulaRaporId: this.selectedRapor.MEDULARAPORID,
+                        tarih: this.selectedRapor.ABITTAR.slice(0, 10).split('-').reverse().join('.')
+                    });
+
+                    this.modalSuccess = result.success;
+                    this.modalMessage = result.message;
+
+                    if (result.success) {
+                        // Refresh reports after successful operation
+                        setTimeout(() => {
+                            this.raporSorgula();
+                        }, 2000);
+                    }
+                } catch (e) {
+                    this.modalSuccess = false;
+                    this.modalMessage = `İşlem hatası: ${e.message}`;
+                } finally {
+                    this.modalLoading = false;
+                }
+            },
+
+            async modalRaporKapat() {
+                if (!this.selectedRapor || !this.token) return;
+
+                this.modalLoading = 'kapat';
+                this.modalMessage = '';
+
+                try {
+                    const result = await raporKapat({
+                        kullaniciAdi: this.currentUser.kullanici,
+                        isyeriKodu: this.currentUser.isyeriKodu,
+                        wsToken: this.token,
+                        medulaRaporId: this.selectedRapor.MEDULARAPORID
+                    });
+
+                    this.modalSuccess = result.success;
+                    this.modalMessage = result.message;
+
+                    if (result.success) {
+                        // Refresh reports after successful operation
+                        setTimeout(() => {
+                            this.raporSorgula();
+                        }, 2000);
+                    }
+                } catch (e) {
+                    this.modalSuccess = false;
+                    this.modalMessage = `İşlem hatası: ${e.message}`;
+                } finally {
+                    this.modalLoading = false;
+                }
+            },
+
+            async modalRaporPersonelimDegil() {
+                if (!this.selectedRapor || !this.token) return;
+
+                this.modalLoading = 'personelim_degil';
+                this.modalMessage = '';
+
+                try {
+                    const vakaKodu = getVakaKodu(this.selectedRapor.VAKAADI);
+                    const result = await raporPersonelimDegil({
+                        kullaniciAdi: this.currentUser.kullanici,
+                        isyeriKodu: this.currentUser.isyeriKodu,
+                        wsToken: this.token,
+                        tckNo: this.selectedRapor.TCKIMLIKNO,
+                        vaka: vakaKodu,
+                        medulaRaporId: this.selectedRapor.MEDULARAPORID
+                    });
+
+                    this.modalSuccess = result.success;
+                    this.modalMessage = result.message;
+
+                    if (result.success) {
+                        // Refresh reports after successful operation
+                        setTimeout(() => {
+                            this.raporSorgula();
+                        }, 2000);
+                    }
+                } catch (e) {
+                    this.modalSuccess = false;
+                    this.modalMessage = `İşlem hatası: ${e.message}`;
+                } finally {
+                    this.modalLoading = false;
+                }
+            },
+            
+            parseRaporXML(xmlText) {
+                try {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+
+                    // Check for parsing errors
+                    const parseError = xmlDoc.querySelector('parsererror');
+                    if (parseError) {
+                        throw new Error('XML parsing error: ' + parseError.textContent);
+                    }
+
+                    // Check for SOAP fault
+                    const faultCode = xmlDoc.querySelector('faultcode');
+                    if (faultCode) {
+                        const faultString = xmlDoc.querySelector('faultstring')?.textContent || 'Unknown SOAP fault';
+                        throw new Error(`SOAP Fault: ${faultString}`);
+                    }
+
+                    // Check for error response
+                    const sonucKod = xmlDoc.querySelector('sonucKod')?.textContent;
+                    const sonucAciklama = xmlDoc.querySelector('sonucAciklama')?.textContent;
+
+                    if (sonucKod && sonucKod !== '0') {
+                        const errorMsg = sonucAciklama || `Hata Kodu: ${sonucKod}`;
+                        this.$store.commit('setResponse', errorMsg);
+                        return;
+                    }
+
+                    // Try to find report data with different possible element names
+                    let nodes = xmlDoc.querySelectorAll('RaporAramaTarihleBean') ||
+                        xmlDoc.querySelectorAll('raporAramaTarihileBeans') ||
+                        xmlDoc.querySelectorAll('rapor');
+
+                    const temp = [];
+                    const raporDurumuMap = {
+                        '1': 'Çalışır',
+                        '2': 'Kontrol',
+                        '3': 'Devamı Verildi',
+                        '4': 'Sevkli',
+                        '5': 'Hastane Kapattı',
+                        '6': 'Çalışır Olup Çakışma Var',
+                        '7': 'Kontrol olup çakışma var',
+                        '8': 'Maluliyet Azaltılabilir çalışır',
+                        '9': 'Maluliyet Sevk Çalışır',
+                        '10': 'Analık Doğum Öncesi Çalışır',
+                        '11': 'Analık Doğum Öncesi Çalışamaz',
+                        '12': 'Analık Doğum Sonrası',
+                        '13': 'Maluliyet Azaltılır Kontrol',
+                        '14': 'Maluliyet Sevk Kontrol',
+                        '15': 'Maluliyet Azaltılır Kontrol Devam Verildi',
+                        '16': 'Maluliyet Sevk Kontrol Devam Verildi'
+                    };
+
+                    for (let i = 0; i < nodes.length; i++) {
+                        const n = nodes[i];
+                        const raporCode = this.getElementText(n, 'RAPORDURUMU');
+
+                        temp.push({
+                            TCKIMLIKNO: this.getElementText(n, 'TCKIMLIKNO'),
+                            AD: this.getElementText(n, 'AD'),
+                            SOYAD: this.getElementText(n, 'SOYAD'),
+                            MEDULARAPORID: this.getElementText(n, 'MEDULARAPORID'),
+                            RAPORTAKIPNO: this.getElementText(n, 'RAPORTAKIPNO'),
+                            RAPORSIRANO: this.getElementText(n, 'RAPORSIRANO'),
+                            POLIKLINIKTAR: this.getElementText(n, 'POLIKLINIKTAR'),
+                            ABASTAR: this.getElementText(n, 'ABASTAR'),
+                            ABITTAR: this.getElementText(n, 'ABITTAR'),
+                            RAPORDURUMU: raporDurumuMap[raporCode] || raporCode,
+                            VAKAADI: this.getElementText(n, 'VAKAADI'),
+                            VAKA: this.getElementText(n, 'VAKA'),
+                            ARSIV: (this.getElementText(n, 'ARSIV') || '').trim() === '1'
+                        });
+                    }
+
+                    this.raporlar = temp;
+                    this.$store.commit('setResponse',
+                        temp.length > 0
+                            ? `${temp.length} rapor bulundu.`
+                            : 'Sorguladığınız tarih aralığında kayıt bulunamadı.'
+                    );
+
+                } catch (e) {
+                    console.error('XML Parse Error:', e);
+                    this.$store.commit('setResponse', `XML Parse Hatası: ${e.message}`);
+                    this.raporlar = [];
+                }
+            },
+            
+            getElementText(parent, tagName) {
+                const element = parent.querySelector(tagName);
+                return element ? element.textContent.trim() : '';
+            },
+            
+            formatDate(val) {
+                if (!val) return '';
+
+                // Handle different date formats
+                if (/^\d{4}-\d{2}-\d{2}$/.test(val)) {
+                    // YYYY-MM-DD format
+                    return val.split('-').reverse().join('.');
+                } else if (/^\d{2}\.\d{2}\.\d{4}$/.test(val)) {
+                    // Already in DD.MM.YYYY format
+                    return val;
+                } else if (val.includes('T')) {
+                    // ISO datetime format
+                    const date = new Date(val);
+                    return date.toLocaleDateString('tr-TR');
+                }
+
+                return val;
+            }
+        },
+        
+        mounted() {
+            // Check if token is still valid on app start
+            if (this.$store.getters.isTokenValid) {
+                this.raporSorgula();
+            }
+        }
+    });
+    </script>
+    <script>
+    // İnternet bağlantısı kontrolü
+    function checkInternet() {
+        // CDN'den küçük bir dosya isteği
+        fetch('https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js', {method:'HEAD', cache:'no-store'})
+            .then(function(resp) {
+                if (resp.ok) {
+                    document.getElementById('app').style.display = '';
+                    document.getElementById('no-internet').style.display = 'none';
+                } else {
+                    throw new Error('Bağlantı yok');
+                }
+            })
+            .catch(function() {
+                document.getElementById('app').style.display = 'none';
+                document.getElementById('no-internet').style.display = 'flex';
+            });
+    }
+    window.addEventListener('DOMContentLoaded', checkInternet);
     </script>
     <script>
     // İnternet bağlantısı kontrolü
@@ -237,6 +967,7 @@
     </script>
 </body>
 </html>
+
 
 
 
