@@ -713,15 +713,42 @@
 
                 try {
                     const vakaKodu = getVakaKodu(this.selectedRapor.VAKAADI);
-                    const result = await raporOnayla({
+
+                    // Tarihi daha güvenli şekilde parse et
+                    let tarihRaw = this.selectedRapor.ABITTAR || this.selectedRapor.ABASTAR || '';
+                    let tarih = '';
+                    if (/^\d{4}-\d{2}-\d{2}/.test(tarihRaw)) {
+                        // YYYY-MM-DD -> DD.MM.YYYY
+                        tarih = tarihRaw.slice(0,10).split('-').reverse().join('.');
+                    } else if (/^\d{2}\.\d{2}\.\d{4}$/.test(tarihRaw)) {
+                        // Zaten DD.MM.YYYY
+                        tarih = tarihRaw;
+                    } else if (tarihRaw.includes('T')) {
+                        const d = new Date(tarihRaw);
+                        if (!isNaN(d)) {
+                            tarih = d.toISOString().slice(0,10).split('-').reverse().join('.');
+                        } else {
+                            tarih = tarihRaw;
+                        }
+                    } else {
+                        tarih = tarihRaw;
+                    }
+
+                    const params = {
                         kullaniciAdi: this.currentUser.kullanici,
                         isyeriKodu: this.currentUser.isyeriKodu,
                         wsToken: this.token,
                         tckNo: this.selectedRapor.TCKIMLIKNO,
                         vaka: vakaKodu,
                         medulaRaporId: this.selectedRapor.MEDULARAPORID,
-                        tarih: this.selectedRapor.ABITTAR.slice(0, 10).split('-').reverse().join('.')
-                    });
+                        tarih: tarih
+                    };
+
+                    // Debug: alert ve console.log ile gönderilen parametreleri göster
+                    alert('Gönderilen parametreler (onayla):\n' + JSON.stringify(params, null, 2));
+                    console.log('Rapor Onayla params:', params);
+
+                    const result = await raporOnayla(params);
 
                     this.modalSuccess = result.success;
                     this.modalMessage = result.message;
