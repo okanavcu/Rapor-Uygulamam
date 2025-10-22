@@ -354,6 +354,7 @@
 
     // Helper functions for SOAP operations
     async function raporOnayla(params) {
+        alert(JSON.stringify(params))
         try {
             const soap = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.sgk.gov.tr/">
         <soapenv:Header/>
